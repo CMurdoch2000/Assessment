@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <img src="~/Content/lt.jpg" />
+    
+    <p class="lead">Welcome to the theatre website. View posts here and log in. </p>
+    
+
+</div>
+ <div class="slider">
+     <div><img src="https://exeternorthcott.co.uk/wp-content/uploads/2017/06/Ballet-Boyz-Header-1-900x300.jpg" /></div>
+     <div><img src="http://www.uhef.org/wp-content/uploads/2017/05/uni-theater-pix-shrek-41917-A-900x300.jpg" /></div>
+     <div><img src="http://the1448projects.org/wp-content/uploads/2014/02/900x300_1448_TheaterAnonymous.jpg" /></div>
+ </div>
+<div class="row">
+    <div class="col-md-4">
+        <h3>Logging in</h3>
+        <p>
+           You can log in to comment on any posts we put up
+        </p>
+       
+    </div>
+    <div class="col-md-4">
+        <h3>New Shows</h3>
+        <p>Check out the posts page to see all the upcoming shows</p>
+        <p></p>
+    </div>
+    <div class="col-md-4">
+        <h3>Special Events</h3>
+        <p> For special events, contact the Theatre staff</p>
+        <p></p>
+    </div>
+</div>
+
+<script>
+$(".slider").slick({
+
+  // normal options...
+  infinite: false,
+
+  // the magic
+  responsive: [{
+
+      adaptiveheight: true,
+      infinite: true,
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        infinite: true
+      }
+
+    }, {
+
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        dots: true
+      }
+
+    }, {
+
+      breakpoint: 300,
+      settings: "unslick" // destroys slick
+
+    }]
+});
+</script>
